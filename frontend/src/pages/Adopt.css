@@ -1,0 +1,281 @@
+.adopt-page {
+    background: #FFFBF5;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.adopt-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 48px;
+    background: white;
+    border-bottom: 1px solid #F0E8D8;
+}
+
+.adopt-logo {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: #3B6D11;
+    cursor: pointer;
+}
+
+.adopt-nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.adopt-nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #888780;
+    text-decoration: none;
+}
+
+.adopt-nav-links a.active {
+    color: #3B6D11;
+}
+
+.list-pet-btn {
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+    background: #3B6D11;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+/* HEADER */
+.adopt-body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px;
+}
+
+.adopt-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.section-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #3B6D11;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.adopt-header h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #2C2C2A;
+    margin-bottom: 12px;
+}
+
+.adopt-header p {
+    font-size: 15px;
+    color: #888780;
+}
+
+/* FILTERS */
+.city-filters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+
+.city-btn {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 99px;
+    border: 1px solid #F0E8D8;
+    background: white;
+    color: #888780;
+    cursor: pointer;
+}
+
+.city-btn.active {
+    background: #3B6D11;
+    color: white;
+    border-color: #3B6D11;
+}
+
+/* LIST FORM */
+.list-form {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #F0E8D8;
+    padding: 28px;
+    margin-bottom: 36px;
+}
+
+.list-form h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2C2C2A;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #2C2C2A;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #F0E8D8;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #FFFBF5;
+    outline: none;
+}
+
+.form-group textarea {
+    height: 80px;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3B6D11;
+}
+
+.form-message {
+    background: #EAF3DE;
+    color: #3B6D11;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.submit-btn {
+    background: #3B6D11;
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 99px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* PETS GRID */
+.pets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pet-card {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #F0E8D8;
+    overflow: hidden;
+}
+
+.pet-emoji-box {
+    font-size: 72px;
+    text-align: center;
+    padding: 28px 0 20px;
+    background: #EAF3DE;
+}
+
+.pet-info {
+    padding: 16px 18px 20px;
+}
+
+.pet-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2C2C2A;
+}
+
+.pet-breed {
+    font-size: 13px;
+    color: #888780;
+    margin-top: 3px;
+}
+
+.pet-desc {
+    font-size: 13px;
+    color: #5F5E5A;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.pet-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 10px 0 14px;
+}
+
+.ptag {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 99px;
+    background: #EAF3DE;
+    color: #3B6D11;
+}
+
+.adopt-btn {
+    width: 100%;
+    background: #BA7517;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* NO PETS */
+.no-pets {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.no-pets-emoji {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.no-pets h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2C2C2A;
+    margin-bottom: 8px;
+}
+
+.no-pets p {
+    font-size: 14px;
+    color: #888780;
+    margin-bottom: 24px;
+}
