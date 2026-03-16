@@ -2,13 +2,13 @@ const express = require('express')
 const router = express.Router()
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const db = require('../db')
+const User = require('../models/User')
 
 router.post('/register', async (req, res) => {
     try {
         const { name, email, password } = req.body
 
-        const existingUser = await db.users.findOne({ email })
+        const existingUser = await User.findOne({ email })
         if (existingUser) {
             return res.status(400).json({ message: 'Email already registered!' })
         }
@@ -16,16 +16,13 @@ router.post('/register', async (req, res) => {
         const salt = await bcrypt.genSalt(10)
         const hashedPassword = await bcrypt.hash(password, salt)
 
-        await db.users.insert({
+        const user = new User({
             name,
             email,
-            password: hashedPassword,
-            bio: '',
-            location: '',
-            avatar: '',
-            createdAt: new Date()
+            password: hashedPassword
         })
 
+        await user.save()
         res.status(201).json({ message: 'Account created successfully!' })
 
     } catch (err) {
@@ -37,7 +34,7 @@ router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body
 
-        const user = await db.users.findOne({ email })
+        const user = await User.findOne({ email })
         if (!user) {
             return res.status(400).json({ message: 'Invalid email or password!' })
         }
