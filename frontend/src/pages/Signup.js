@@ -15,7 +15,7 @@ function Signup() {
         e.preventDefault()
         setLoading(true)
         try {
-            const res = await axios.post('http://localhost:5000/api/auth/register', form)
+            const res = await axios.post('https://pawconnect-backend-9vob.onrender.com/api/auth/register', form)
             setMessage(res.data.message)
         } catch (err) {
             if (err.response) {

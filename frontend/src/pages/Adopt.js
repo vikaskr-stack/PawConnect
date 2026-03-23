@@ -18,7 +18,7 @@ function Adopt() {
 
     const fetchPets = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/pets')
+            const res = await axios.get('https://pawconnect-backend-9vob.onrender.com/api/pets')
             setPets(res.data)
         } catch (err) {
             console.log(err)
@@ -32,7 +32,7 @@ function Adopt() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            await axios.post('http://localhost:5000/api/pets', form)
+            await axios.post('https://pawconnect-backend-9vob.onrender.com/api/pets', form)
             setMessage('Pet listed successfully!')
             setShowForm(false)
             fetchPets()
